@@ -18,7 +18,8 @@ fn birthday(s: &[i32], d: i32, m: i32) -> i32 {
             result += 1;
         }
     }
-
+    print!("{esc}[2J{esc}[1;1H", esc = 27 as char); // <-- clear the screen
+    println!("el result es: {}", result);
     result
 }
 
