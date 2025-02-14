@@ -1,0 +1,4 @@
+def findZigZagSequence(a, n):
+    a.sort()
+    k = (n + 1) // 2
+    print(*(a[:k - 1] + [a[-1]] + a[k - 1:-1][::-1]))
