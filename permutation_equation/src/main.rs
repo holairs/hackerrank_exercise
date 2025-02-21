@@ -1,12 +1,16 @@
+use std::usize;
+
 #[allow(non_snake_case)]
 fn permutationEquation(p: &[i32]) -> Vec<i32> {
     let mut y_result: Vec<i32> = Vec::new();
-    let mut list = p.to_vec();
-    list.sort();
 
-    for y in 0..p.len() {
-        let index = p.iter().position(|&x| x - 1 == y as i32).unwrap();
-        y_result.push(index as i32  + 1 - y as i32);
+    for x in 1..=p.len() {
+        for y in 1..=p.len() {
+            let value: i32 = p[(p[y - 1] - 1) as usize];
+            if value == x as i32 {
+                y_result.push(y as i32);
+            }
+        }
     }
 
     y_result
