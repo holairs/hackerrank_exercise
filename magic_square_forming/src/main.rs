@@ -5,7 +5,7 @@
  * The function accepts 2D_INTEGER_ARRAY s as parameter.
  */
 
-fn formingMagicSquare(s: &[Vec<i32>]) -> i32 {
+fn forming_magic_square(s: &[Vec<i32>]) -> i32 {
     let magic_squares: [[[i32; 3]; 3]; 8] = [
         [[8, 1, 6], [3, 5, 7], [4, 9, 2]],
         [[6, 1, 8], [7, 5, 3], [2, 9, 4]],
@@ -38,6 +38,6 @@ fn formingMagicSquare(s: &[Vec<i32>]) -> i32 {
 
 fn main() {
     let s = [vec![5, 3, 4], vec![1, 5, 8], vec![6, 4, 2]];
-    let result = formingMagicSquare(&s);
+    let result = forming_magic_square(&s);
     println!("{}", result);
 }
