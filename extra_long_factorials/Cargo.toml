@@ -1,0 +1,6 @@
+[package]
+name = "extra_long_factorials"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
